@@ -337,17 +337,6 @@ Partial Class ProcessMachineData
             myString2 &= predictedErrors.GetByIndex(predictedErrors.Count - i) & "<br>"
         Next i
         Me.myspan.InnerHtml = "<table border=1 cellpadding=3><tr><th>Error probability</th><th>Timestamp</th><th>Error text</th></tr>" & myString2 & "</table>"
-        'Me.myspan.InnerHtml = String.Format("Point: {0:f2}, {1:f2}", Xpos, Ypos)
-
-        ''Display the location of where the user clicked on the chart
-        'Me.Chart1.Series.Add("Series_UserClick")
-        'Me.Chart1.Series("Series_UserClick").ChartType = SeriesChartType.Point
-        'Me.Chart1.Series("Series_UserClick").BorderWidth = 3
-        'Me.Chart1.Series("Series_UserClick").BorderColor = Drawing.Color.DarkRed
-        'Me.Chart1.Series("Series_UserClick").Color = Drawing.Color.FromArgb(100, 255, 0, 0)  'Drawing.Color.red
-        'Me.Chart1.Series("Series_UserClick").MarkerStyle = MarkerStyle.Circle
-        'Me.Chart1.Series("Series_UserClick").MarkerSize = 15
-        'Chart1.Series("Series_UserClick").Points.AddXY(Xpos, Ypos)
 
         Chart1.ChartAreas("MainChartArea").AxisX.StripLines(0).IntervalOffset = Xpos - (maxTimeDiff / 2)
         Chart1.ChartAreas("MainChartArea").AxisX.StripLines(0).StripWidth = maxTimeDiff
