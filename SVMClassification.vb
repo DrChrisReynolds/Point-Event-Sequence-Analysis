@@ -25,7 +25,7 @@ Public Class SVMClassification
 
         Try
             ' Open the file using a stream reader.
-            Using sr As New StreamReader("C:\Users\Chris Reynolds\Dropbox\University Work\CyBio\svm_model")
+            Using sr As New StreamReader((System.AppDomain.CurrentDomain.BaseDirectory & "/svm_model"))
 
                 While (Not sr.EndOfStream)
                     Dim s As String
@@ -80,7 +80,7 @@ Public Class SVMClassification
         wordIDs = New Dictionary(Of String, Integer)
         Try
             ' Open the file using a stream reader.
-            Using sr As New StreamReader("C:\Users\Chris Reynolds\Dropbox\University Work\CyBio\words.dat")
+            Using sr As New StreamReader(System.AppDomain.CurrentDomain.BaseDirectory & "/words.dat")
                 While (Not sr.EndOfStream)
                     Dim s As String
                     ' Read the stream to a string and write the string to the console.

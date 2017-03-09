@@ -14,7 +14,6 @@ Partial Class TimelogAverager
         Dim defaultTime As DateTime = New DateTime(2000, 1, 1, 0, 0, 0, 0)
         Dim totalInstances, totalTargets, instances As Int64
 
-
         'Initialise the date variables, or retrieve them from session variables if they already exist
         If Session("dates") Is Nothing Then
             dates = New ArrayList
@@ -27,9 +26,13 @@ Partial Class TimelogAverager
             totalDates = Session("totalDates")
         End If
 
-
         Dim uploadedFiles As HttpFileCollection = Request.Files
         Span1.InnerHtml = String.Empty
+
+        If uploadedFiles.Count = 0 Then
+            Span1.InnerHtml &= "Error:" & vbCrLf & "You must select a file first"
+            Exit Sub
+        End If
 
         For i As Integer = 0 To uploadedFiles.Count - 1
             Dim userPostedFile As HttpPostedFile = uploadedFiles(i)
@@ -68,14 +71,24 @@ Partial Class TimelogAverager
                         sr.Close()
                     Catch ex As Exception
                         Span1.InnerHtml &= "Error:" & vbCrLf & ex.Message
+                        Exit Sub
                     End Try
                 End If
             Catch ex As Exception
                 Span1.InnerHtml &= "Error:" & vbCrLf & ex.Message
+                Exit Sub
             End Try
 
         Next i
 
+        'Check to make sure that timestamps were found in the files
+        If totalTargets = 0 Then
+            Span1.InnerHtml &= "Error:" & vbCrLf & "No timestamps located in selected file"
+            If uploadedFiles.Count > 1 Then
+                Span1.InnerHtml &= "s"
+            End If
+            Exit Sub
+        End If
 
         'Clear chart series
         While (Chart1.Series.Count > 0)
