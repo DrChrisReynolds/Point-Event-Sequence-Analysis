@@ -8,11 +8,12 @@ Partial Class TimelogAverager
     Dim dates As ArrayList = New ArrayList
     Dim totalDates As ArrayList = New ArrayList
     Dim mydates As DateProcessor = New DateProcessor
+    Dim minInstances As Int64
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Dim defaultTime As DateTime = New DateTime(2000, 1, 1, 0, 0, 0, 0)
-        Dim totalInstances, totalTargets, instances As Int64
+        Dim instances As Int64, minInstances = -1
 
         'Initialise the date variables, or retrieve them from session variables if they already exist
         If Session("dates") Is Nothing Then
@@ -47,7 +48,7 @@ Partial Class TimelogAverager
 
                     'Open the file
                     Try
-                        ' Open the file using a stream reader.
+                        ' Open the file using a stream reader
                         Dim sr As StreamReader = New StreamReader(userPostedFile.InputStream)
                         Dim myString As String = ""
                         Do While sr.Peek() >= 0
@@ -66,8 +67,11 @@ Partial Class TimelogAverager
                                 End If
                             End If
                         Loop  ' End of file parsing loop
-                        totalInstances += instances
-                        totalTargets += 1
+                        If minInstances = -1 Then
+                            minInstances = instances
+                        Else
+                            minInstances = Math.Min(minInstances, instances)
+                        End If
                         sr.Close()
                     Catch ex As Exception
                         Span1.InnerHtml &= "Error:" & vbCrLf & ex.Message
@@ -82,11 +86,12 @@ Partial Class TimelogAverager
         Next i
 
         'Check to make sure that timestamps were found in the files
-        If totalTargets = 0 Then
+        If minInstances <= 0 Then
             Span1.InnerHtml &= "Error:" & vbCrLf & "No timestamps located in selected file"
             If uploadedFiles.Count > 1 Then
                 Span1.InnerHtml &= "s"
             End If
+            Me.Button_Download.Enabled = False
             Exit Sub
         End If
 
@@ -95,41 +100,47 @@ Partial Class TimelogAverager
             Chart1.Series.RemoveAt(0)
         End While
 
-
         'Set up a new array of points
         Me.Chart1.Series.Add("Series1")
         Me.Chart1.Series("Series1").ChartType = SeriesChartType.Point
         Me.Chart1.Series("Series1").BorderWidth = 4
         Me.Chart1.Series("Series1").Color = Drawing.Color.MediumVioletRed
 
-        Dim lastX As Integer = -1, lastY As Integer = -1
+        Dim firstXPos As Int64 = -1
 
-        Dim averageInstances As Int64 = Math.Round(totalInstances / totalTargets)
-        For i = 0 To averageInstances - 1
-            Dim d As Double = dates(i) / totalDates(i)
+        For y = 0 To minInstances - 1
+            Dim d As Double = dates(y) / totalDates(y)
             Dim newTime As DateTime = New DateTime(2000, 1, 1, 0, 0, 0, 0).AddMilliseconds(d)
 
-            If i < 30 Then
+            If y < 20 Then
                 Span1.InnerHtml &= "<br>" & newTime.ToString("MM/dd/yyyy hh:mm:ss.fff tt")
             End If
 
             Dim xPos As Int64 = Int(d / 1000) 'Time is measured in milliseconds, so dividing by 1000 gives seconds
-            Dim yPos As Int64 = i
+            If y = 0 Then
+                firstXPos = xPos
+            End If
 
-            If xPos = lastX And yPos = lastY Then Continue For
+            Chart1.Series("Series1").Points.AddXY(xPos - firstXPos, y)
 
-            Dim q As String = String.Format("{0}={1}", xPos, yPos)
-            Chart1.Series("Series1").Points.AddXY(xPos, yPos)
-
-            lastX = xPos
-            lastY = yPos
-
-        Next i
+        Next y
         Span1.InnerHtml &= "<br>..."
+
+        'Set chart axis options
+        Me.Chart1.ChartAreas(0).AxisX.Minimum = 0
+        Me.Chart1.ChartAreas(0).AxisX.Title = "Time (secs)"
+        Me.Chart1.ChartAreas(0).AxisX.TextOrientation = TextOrientation.Horizontal
+
+        Me.Chart1.ChartAreas(0).AxisY.Title = "Point events"
+        Me.Chart1.ChartAreas(0).AxisY.TextOrientation = TextOrientation.Rotated270
 
         'Store the dates as session  variables
         Session("dates") = dates
         Session("totalDates") = totalDates
+        Session("minInstances") = minInstances
+
+        'Enable download button
+        Me.Button_Download.Enabled = True
 
     End Sub
 
@@ -138,6 +149,12 @@ Partial Class TimelogAverager
 
         dates = Session("dates")
         totalDates = Session("totalDates")
+        minInstances = Session("minInstances")
+
+        If minInstances <= 0 Then
+            Span1.InnerHtml &= "Error:" & vbCrLf & "Nothing to download"
+            Exit Sub
+        End If
 
         'Get response, set content type.
         Dim response As HttpResponse = HttpContext.Current.Response
@@ -148,13 +165,13 @@ Partial Class TimelogAverager
 
         'Write time data to the response
         Dim writer As StreamWriter = New StreamWriter(response.OutputStream)
-        For i = 0 To 50
+        For i = 0 To minInstances - 1
             Dim newTime As DateTime = New DateTime(2000, 1, 1, 0, 0, 0, 0).AddMilliseconds(dates(i) / totalDates(i))
             Dim mystring As String = newTime.ToString("MM/dd/yyyy hh:mm:ss.fff tt")
             writer.WriteLine(mystring)
         Next i
 
-        'Flush writer and finish response to end the donwloading of the file
+        'Flush writer and finish response to end the downloading of the file
         writer.Flush()
         response.End()
 

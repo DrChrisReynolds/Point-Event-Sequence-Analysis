@@ -28,7 +28,7 @@
         </div>
 
         <br />
-        <asp:Button ID="Button_Download" runat="server" Text="Download averaged reference log" />
+        <asp:Button ID="Button_Download" runat="server" Text="Download averaged reference log" Enabled="false"/>
         <br />
         <br />
         <span id="Span1" runat="server"></span>

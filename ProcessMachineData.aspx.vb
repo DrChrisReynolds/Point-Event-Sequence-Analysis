@@ -144,7 +144,7 @@ Partial Class ProcessMachineData
         Dim script As String = "function _getCoord(e){if(typeof(e.x)=='undefined')return e.layerX+','+e.layerY;return e.x+','+e.y}"
         Me.ClientScript.RegisterClientScriptBlock(Me.Chart1.GetType(), "Chart", script, True)
 
-        'Set axis options
+        'Set chart axis options
         Me.Chart1.ChartAreas(0).AxisX.Minimum = 0
         Me.Chart1.ChartAreas(0).AxisX.Title = "Time (secs)"
         Me.Chart1.ChartAreas(0).AxisX.TextOrientation = TextOrientation.Horizontal
