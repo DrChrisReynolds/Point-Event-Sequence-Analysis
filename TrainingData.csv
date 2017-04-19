@@ -1,0 +1,201 @@
+Weighting,Word Data
+0,topic assay plan parameter assay plan status change for the cycle with the id 2113 1 planned
+0,topic assay plan parameter assay plan status change for the cycle with the id 2113 2 started
+0,topic assay plan parameter assay plan status change for the cycle with the id 2113 4 finished
+0,topic assay plan parameter assay plan status change for the cycle with the id 2115 1 planned
+0,topic assay plan parameter assay plan status change for the cycle with the id 2115 2 started
+0,topic assay plan parameter assay plan status change for the cycle with the id 2115 3 aborted
+0,topic event parameter processing event cycle 1 felix_1 p02 felix1 dilute1_vbs_test felix_1 event 10
+0,topic event parameter processing event cycle 1 felix_1 p02 felix1 dilute1_vbs_test felix_1 event 11
+0,topic event parameter processing event cycle 1 felix_1 p02 felix1 dilute1_vbs_test felix_1 event 12
+0,topic event parameter processing event cycle 1 felix_1 p02 felix1 dilute1_vbs_test felix_1 event 13
+0,topic event parameter processing event cycle 1 felix_1 p02 felix1 dilute1_vbs_test felix_1 event 14
+0,topic event parameter processing event cycle 1 felix_1 p02 felix1 dilute1_vbs_test felix_1 event 15
+0,topic event parameter processing event cycle 1 felix_1 p02 felix1 dilute1_vbs_test felix_1 event 16
+0,topic event parameter processing event cycle 1 felix_1 p02 felix1 dilute1_vbs_test felix_1 event 17
+0,topic event parameter processing event cycle 1 felix_1 p02 felix1 dilute1_vbs_test felix_1 event 18
+0,topic event parameter processing event cycle 1 felix_1 p02 felix1 dilute1_vbs_test felix_1 event 2
+0,topic event parameter processing event cycle 1 felix_1 p02 felix1 dilute1_vbs_test felix_1 event 3
+0,topic event parameter processing event cycle 1 incubator_1 fetch plate 12 incubator_1 event 1
+0,topic event parameter processing event cycle 1 incubator_1 fetch plate 14 incubator_1 event 4
+0,topic event parameter processing event cycle 1 incubator_1 fetch plate 15 incubator_1 event 3
+0,topic event parameter processing event cycle 1 incubator_1 fetch plate 16 incubator_1 event 2
+0,topic event parameter processing event cycle 1 transport felix_1 waste 1 robot_1 event 1
+0,topic event parameter processing event cycle 1 transport felix_1 waste 2 robot_1 event 1
+0,topic event parameter processing event cycle 1 transport felix_1 waste 3 robot_1 event 3
+0,topic event parameter processing event cycle 1 transport felix_1 waste robot_1 event 4
+0,topic event parameter processing event cycle 1 transport felix_2 felix_1 robot_1 event 4
+0,topic event parameter processing event cycle 1 transport felix_2 waste 1 robot_1 event 3
+0,topic event parameter processing event cycle 1 transport felix_2 waste robot_1 event 4
+0,topic event parameter processing event cycle 1 transport incubator_1 reader_1 10 robot_1 event 4
+0,topic event parameter processing event cycle 1 transport incubator_1 reader_1 14 robot_1 event 2
+0,topic event parameter processing event cycle 1 transport incubator_1 reader_1 17 robot_1 event 5
+0,topic event parameter processing event cycle 1 transport incubator_1 reader_1 22 robot_1 event 4
+0,topic event parameter processing event cycle 1 transport reader_1 incubator_1 15 robot_1 event 4
+0,topic event parameter processing event cycle 1 transport reader_1 incubator_1 17 robot_1 event 1
+0,topic event parameter processing event cycle 1 transport reader_1 incubator_1 18 robot_1 event 4
+0,topic event parameter processing event cycle 1 transport reader_1 incubator_1 2 robot_1 event 2
+0,topic variables parameter scheduler reading value plate 7 platestore_level 1246576928
+0,user imperial computer imperial pc footer
+0,topic cybio composer process information parameter incubator_1 deinitializing service database view
+0,topic cybio composer process information parameter incubator_1 deinitializing service error recovery
+0,topic cybio composer process information parameter incubator_1 deinitializing service fileaccess
+0,topic cybio composer process information parameter incubator_1 deinitializing service incubator_1_2
+0,topic cybio composer process information parameter incubator_1 deinitializing service incubator_3_4
+0,topic cybio composer process information parameter incubator_1 deinitializing service interpreter
+0,topic cybio composer process information parameter incubator_1 deinitializing service liquid transfer service
+0,topic cybio composer process information parameter incubator_1 deinitializing service liquiddb
+0,topic cybio composer process information parameter incubator_1 deinitializing service ole server
+0,topic cybio composer process information parameter incubator_1 deinitializing service platedb
+0,topic cybio composer process information parameter incubator_1 deinitializing service platetrackingdb
+0,topic cybio composer process information parameter incubator_1 deinitializing service scheduler
+0,topic cybio composer process information parameter incubator_1 initialization finished
+0,topic cybio composer process information parameter incubator_1 initializing service database view
+0,topic cybio composer process information parameter incubator_1 initializing service error recovery
+0,topic cybio composer process information parameter incubator_1 initializing service fileaccess
+0,topic cybio composer process information parameter incubator_1 initializing service incubator_1_2
+0,topic cybio composer process information parameter incubator_1 initializing service incubator_3_4
+0,topic cybio composer process information parameter incubator_1 initializing service interpreter
+0,topic cybio composer process information parameter incubator_1 initializing service liquid transfer service
+0,topic cybio composer process information parameter incubator_1 initializing service liquiddb
+0,topic cybio composer process information parameter incubator_1 initializing service ole server
+0,topic cybio composer process information parameter incubator_1 initializing service platedb
+0,topic cybio composer process information parameter incubator_1 initializing service platetrackingdb
+0,topic cybio composer process information parameter incubator_1 initializing service scheduler
+0,topic cybio composer process information parameter incubator_1 starting deinitialization
+0,topic cybio composer process information parameter incubator_1 starting initialization
+0,topic cybio composer status parameter incubator_1 status busy
+0,topic cybio composer status parameter incubator_1 status ready
+0,topic cybio composer process information parameter robot_1 command finished put at store position index index
+0,topic cybio composer process information parameter robot_1 starting command put at store position index index details action put store position index
+0,topic cybio composer process information parameter robot_1 command finished get at position position
+0,topic cybio composer process information parameter robot_1 starting command get at position position details action get position position synchronized movement yes
+0,topic cybio composer process information parameter felix_1 starting command vertical drive current position 30 mm details vertical drive
+0,topic cybio composer process information parameter reader_1 command finished condition 1 sys devices scheduler system active
+0,topic cybio composer process information parameter reader_1 starting command condition 1 sys devices scheduler system active details condition 1 sys devices scheduler system active
+0,topic cybio composer process information parameter felix_1 command finished assignment wellheight sys devices platedb labware record wellbottom
+0,topic cybio composer process information parameter felix_1 starting command assignment wellheight sys devices platedb labware record wellbottom details wellheight sys devices platedb labware record wellbottom
+0,topic cybio composer process information parameter felix_1 starting method c programdata cybio userdata libraries felix_1 subs move to labware bms
+0,topic cybio composer process information parameter reader_1 command finished execute sql statement
+0,topic cybio composer process information parameter reader_1 starting command execute sql statement details execute sql statement
+0,topic cybio composer process information parameter robot_1 command finished define variable position reader_1 index 1
+0,topic cybio composer process information parameter robot_1 starting command define variable position reader_1 index 1 details position text reader_1 index integer 1
+0,topic cybio composer process information parameter felix_2 remaining time 1 seconds
+0,topic cybio composer process information parameter robot_1 command finished put at position position
+0,topic cybio composer process information parameter robot_1 starting command put at position position details action put position position synchronized movement yes
+0,topic cybio composer process information parameter robot_1 starting method c programdata cybio userdata libraries robot_1 subs robot pre positioning bms
+0,topic resource registration parameter robot_1 registration
+0,topic resource registration parameter robot_1 unregistration
+0,topic cybio composer process information parameter robot_1 starting method c programdata cybio userdata libraries robot_1 subs robot get plate bms
+0,topic plate tracking parameter end handover takeover internal id 7
+0,topic variables parameter scheduler reading value cycle key 2113
+0,topic cybio composer process information parameter robot_1 starting deinitialization
+0,topic cybio composer process information parameter robot_1 starting initialization
+0,topic cybio composer status parameter robot_1 status busy
+0,topic cybio composer status parameter robot_1 status ready
+0,topic cybio composer process information parameter felix_1 command finished none of these conditions
+0,topic cybio composer process information parameter felix_1 starting command none of these conditions details none of these conditions
+0,topic plate tracking parameter read plate attribute s internal id 7 attribute assayid
+0,topic plate tracking parameter read plate attribute s internal id 7 attribute name
+0,topic cybio composer process information parameter robot_1 command finished none of these conditions
+0,topic cybio composer process information parameter robot_1 starting command none of these conditions details none of these conditions
+0,topic cybio composer process information parameter robot_1 command finished keine der bedingungen
+0,topic cybio composer process information parameter robot_1 starting command keine der bedingungen details keine der bedingungen
+0,topic cybio composer process information parameter robot_1 command finished set velocity to transport
+0,topic cybio composer process information parameter robot_1 starting command set velocity to transport details velocity transport
+0,topic cybio composer process information parameter robot_1 command finished move to position position _safety
+0,topic cybio composer process information parameter robot_1 starting command move to position position _safety details position position _safety synchronized movement yes
+0,topic cybio composer process information parameter felix_1 command finished execute sql statement
+0,topic cybio composer process information parameter felix_1 starting command execute sql statement details execute sql statement
+0,topic event parameter processing event cycle 1 incubator_1 store plate 13 incubator_1 event 1
+0,topic event parameter processing event cycle 1 incubator_1 store plate incubator_1 event 2
+0,topic event parameter processing event cycle 1 platestore_1 import assayplate platestore_1 event 2
+0,topic event parameter processing event cycle 1 transport felix_1 waste robot_1 event 1
+0,topic event parameter processing event cycle 1 transport felix_1 waste robot_1 event 2
+0,topic cybio composer process information parameter robot_1 command finished verify the defined tool and gripper mode
+0,topic plate tracking parameter end handover takeover finished
+0,topic cybio composer process information parameter felix_1 command finished execute command 2 i media number 2 counter
+0,topic cybio composer process information parameter robot_1 command finished condition condition 1 sys devices precise tool_is_gripping
+0,topic cybio composer process information parameter robot_1 starting command condition condition 1 sys devices precise tool_is_gripping details condition 1 sys devices precise tool_is_gripping
+0,topic cybio composer process information parameter robot_1 command finished condition condition 1 rack 1
+0,no problems everything is normal OK all systems working correctly
+0,The operation completed successfully
+0,starting command plate or reservoir
+0,command finished plate or reservoir
+0,using record
+0.05,topic variables parameter scheduler writing value readout 16
+0.05,topic variables parameter scheduler writing value readout 23
+0.05,topic variables parameter scheduler writing value readout 6
+0.1,topic warning parameter timeout module felix_1 event cycle 1 felix_1 p02 felix1 dilute1_vbs_test felix_1 event 12 1 at nominal 1037 at max
+0.1,topic warning parameter timeout module felix_1 event cycle 1 felix_1 p04 felix1 dilute2_vbs_test felix_1 event 11 159 at nominal 6773 at max
+0.1,topic warning parameter timeout module felix_1 event cycle 1 felix_1 p04 felix1 dilute2_vbs_test felix_1 event 16 157 at nominal 6814 at max
+0.1,topic warning parameter timeout module felix_2 event cycle 1 felix_2 p01 felix2 fill and transfer felix_2 event 17 0 at nominal 0 05 38 at max
+0.1,topic cybio composer process information parameter waste initializing service database view
+0.1,topic cybio composer process information parameter robot_1 command finished may tool is not ready
+0.1,topic plate tracking parameter start handover takeover finished
+0.1,topic cybio composer process information parameter felix_1 starting command execute command 2 i media number 2 counter details address 2 command sequence i media number 2 counter
+0.1,Command finished: Re-read once if error occurs (assuming -790 Biotek Error).
+0.2,topic variables parameter scheduler reading value plate 7 lastreaderfile c users imperial documents readerdata 20161026 01 assayplate_14 txt
+0.2,topic variables parameter scheduler reading value plate 7 lastreaderfile c users imperial documents readerdata 20161026 01 assayplate_20 txt
+0.2,topic plate tracking parameter write plate attribute s internal id 2 lastreaderfile c users imperial documents readerdata 20161026 01 sampleplate_1 txt
+0.2,topic plate tracking parameter write plate attribute s internal id 4 lastreaderfile c users imperial documents readerdata 20161026 01 prep1_1 txt
+0.2,topic plate tracking parameter write plate attribute s internal id 7 lastreaderfile c users imperial documents readerdata 20161026 01 assayplate_24 txt
+0.33,topic cybio composer process information parameter felix_1 initializing service error recovery
+0.4,topic cybio composer process information parameter waste initializing service error recovery
+0.5,topic warning parameter timeout module platestore_1 event cycle 1 platestore_1 import assayplate platestore_1 event 2 0 at nominal 1 37 44 at max
+0.5,topic warning parameter timeout module robot_1 event cycle 1 transport incubator_1 reader_1 18 robot_1 event 5 3 at nominal 22798 at max
+0.5,topic status parameter scheduler state finishing
+0.5,topic cybio composer process information parameter reader_1 starting method c programdata cybio userdata libraries reader_1 read prep2 bms
+0.6,topic warning parameter timeout module tipstore_1 event cycle 1 tipstore_1 import tipbox 1 tipstore_1 event 1 0 at nominal 1 39 02 at max
+0.6,topic warning parameter timeout module tipstore_1 event cycle 1 tipstore_1 import tipbox 1 tipstore_1 event 2 0 at nominal 1 39 02 at max
+0.6,topic warning parameter timeout module tipstore_1 event cycle 1 tipstore_1 import tipbox 1 tipstore_1 event 3 0 at nominal 1 39 11 at max
+0.6,topic warning parameter timeout module tipstore_1 event cycle 1 tipstore_1 import tipbox tipstore_1 event 2 0 at nominal 300 at max
+0.6,topic warning parameter timeout module tipstore_1 event cycle 1 tipstore_1 import tipbox tipstore_1 event 2 3 at nominal 303 at max
+0.6,topic warning parameter timeout module tipstore_1 event cycle 1 tipstore_1 import tipbox tipstore_1 event 3 1 at nominal 309 at max
+0.75,topic cybio composer process information parameter reader_1 error in method c programdata cybio userdata libraries reader_1 read prep1 bms
+0.75,topic cybio composer process information parameter reader_1 error when executing command re read once if error occurs assuming 790 biotek error
+0.75,topic cybio composer process information parameter robot_1 error in method c programdata cybio userdata libraries robot_1 tipbox from tipstore_1 to felix_1 bms
+0.75,topic cybio composer process information parameter tipstore_1 error in method c programdata cybio userdata libraries tipstore_1 import tipbox bms
+0.8,topic status parameter scheduler state waiting for jobs
+0.8,topic cybio composer process information parameter tipstore_1 error when executing command end handover of microplate handover end tipstore_1 robot_1
+0.85,topic cybio composer process information parameter reader_1 error when executing command start read readerfile
+1,topic cybio composer error parameter felix_1 signals error error id 0 errortext scripting controller method execution was aborted
+1,topic cybio composer error parameter felix_2 signals error error id 0 errortext scripting controller method execution was aborted
+1,topic cybio composer error parameter felix_2 signals error error id 7 errortext com cybi felix serial port timeout port or device does not respond
+1,topic cybio composer error parameter reader_1 signals error error id 0 errortext scripting controller method execution was aborted
+1,topic cybio composer error parameter robot_1 signals error error id 0 errortext scripting controller method execution was aborted
+1,topic cybio composer error parameter tipstore_1 signals error error id 0 errortext scripting controller method execution was aborted
+1,topic status parameter scheduler state abort
+1,topic status parameter scheduler mode execute
+1,topic status parameter scheduler state finished
+1,topic status parameter scheduler state initialization
+1,error mistake wrong warn warning caution alert bad problem fatal fail failing failure fault faults flaw glitch inaccuracy lapse miscalculation accuracy behavior behaviour correctness unexpected success correction validity
+1,The system cannot find the file path specified
+1,The system cannot open the file
+1,Access denied
+1,The handle password parameter is invalid
+1,Not enough storage is available to process this command
+1,An attempt was made to load a program or file with an incorrect format
+1,Not enough storage or memory is available to complete this operation
+1,The media is write protected. Cannot write to media.
+1,The system cannot find the device specified
+1, A device attached to the system is not functioning
+1,The process cannot access the file because it is being used by another process
+1,The disk is full. No space available.
+1,Operation did not complete successfully because the file contains a virus or potentially unwanted software.
+1,Operation not supported on a resident file directory.
+1,The shutdown restart start operation failed.
+1,The operating system cannot run is not presently configured to run this application program.
+1,The wait operation timed out.
+1,The session was canceled.
+1,The file cannot be opened because it is in the process of being deleted.
+1,An invalid exception handler routine has been detected.
+1,The device is unreachable.
+1,Insufficient memory
+1,The specified extended attribute name was invalid.
+1,The extended attributes are inconsistent.
+1,The target device has insufficient resources to complete the operation.
+1,A data integrity checksum error occurred. Data in the file stream is corrupt.
+1,The file size exceeds the limit allowed and cannot be saved.
+1,The system cannot find the path specified.
+1,The system cannot write to  read from the specified device.
